@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ui.controllers.ManageCategoriesController"
+            prefWidth="600" prefHeight="400">
+
+    <top>
+        <ToolBar>
+            <Button text="Back" onAction="#onBack"/>
+            <Label text="Manage Service Categories"
+                   style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <SplitPane>
+            <TableView fx:id="categoryTable">
+                <columns>
+                    <TableColumn fx:id="nameColumn" text="Category Name"/>
+                </columns>
+            </TableView>
+
+            <VBox spacing="10" padding="10">
+                <TextField fx:id="nameField" promptText="Category name"/>
+                <HBox spacing="10">
+                    <Button text="Add" onAction="#onAdd"/>
+                    <Button text="Update" onAction="#onUpdate"/>
+                    <Button text="Delete" onAction="#onDelete"/>
+                </HBox>
+                <Label fx:id="errorLabel" textFill="red" wrapText="true"/>
+            </VBox>
+        </SplitPane>
+    </center>
+</BorderPane>

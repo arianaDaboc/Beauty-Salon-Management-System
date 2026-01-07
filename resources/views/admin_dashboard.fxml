@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ui.controllers.AdminDashboardController"
+            prefWidth="600" prefHeight="400">
+
+    <top>
+        <ToolBar>
+            <Label text="Admin Dashboard"
+                   style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="10">
+            <Button text="Manage Staff" onAction="#onManageStaff" prefWidth="200"/>
+            <Button text="Manage Service Categories" onAction="#onManageCategories" prefWidth="200"/>
+            <Button text="Manage Services" onAction="#onManageServices" prefWidth="200"/>
+            <Button text="Manage Appointments" onAction="#onManageAppointments" prefWidth="200"/>
+            <Button text="Logout" onAction="#onLogout" prefWidth="200"/>
+        </VBox>
+    </center>
+</BorderPane>

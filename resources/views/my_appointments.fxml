@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ui.controllers.MyAppointmentsController"
+            prefWidth="700" prefHeight="400">
+
+    <top>
+        <ToolBar>
+            <Button text="Back" onAction="#onBack"/>
+            <Label text="My Appointments" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <TableView fx:id="appointmentTable">
+            <columns>
+                <TableColumn fx:id="serviceColumn" text="Service"/>
+                <TableColumn fx:id="staffColumn" text="Staff"/>
+                <TableColumn fx:id="dateColumn" text="Date"/>
+                <TableColumn fx:id="timeColumn" text="Time"/>
+                <TableColumn fx:id="statusColumn" text="Status"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

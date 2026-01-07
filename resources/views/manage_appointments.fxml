@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="ui.controllers.ManageAppointmentsController"
+            prefWidth="900" prefHeight="450">
+
+    <top>
+        <ToolBar>
+            <Button text="Back" onAction="#onBack"/>
+            <Label text="Manage Appointments"
+                   style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <TableView fx:id="appointmentTable">
+            <columns>
+                <TableColumn fx:id="idColumn" text="ID"/>
+                <TableColumn fx:id="userColumn" text="UserId"/>
+                <TableColumn fx:id="serviceColumn" text="ServiceId"/>
+                <TableColumn fx:id="staffColumn" text="StaffId"/>
+                <TableColumn fx:id="dateColumn" text="Date"/>
+                <TableColumn fx:id="timeColumn" text="Time"/>
+                <TableColumn fx:id="statusColumn" text="Status"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <bottom>
+        <HBox spacing="10" alignment="CENTER_RIGHT" padding="10">
+            <Button text="Set Completed" onAction="#onSetCompleted"/>
+            <Button text="Set Cancelled" onAction="#onSetCancelled"/>
+        </HBox>
+    </bottom>
+</BorderPane>
